@@ -8,5 +8,5 @@ tracker.likes = 100;
 tracker.shares = 5;
 tracker.views = 10000;
 
-console.log(tracker);
-console.log(StatsTracker.instance);
+console.log(tracker); // the same instance
+console.log(StatsTracker.instance); // the same instance
