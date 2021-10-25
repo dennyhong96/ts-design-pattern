@@ -1,12 +1,12 @@
 import { StatsTracker } from "./StatsTracker";
 
-const tracker = StatsTracker.instance;
-console.log(tracker);
+const statsTracker = StatsTracker.instance;
+console.log(statsTracker);
 
-tracker.clicks = 10;
-tracker.likes = 100;
-tracker.shares = 5;
-tracker.views = 10000;
+statsTracker.clicks = 10;
+statsTracker.likes = 100;
+statsTracker.shares = 5;
+statsTracker.views = 10000;
 
-console.log(tracker); // the same instance
+console.log(statsTracker); // the same instance
 console.log(StatsTracker.instance); // the same instance
