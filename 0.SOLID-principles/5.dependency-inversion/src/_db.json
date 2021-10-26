@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "title 1", "body": "body 1", "postedBy": "denny" },
+  { "id": 2, "title": "title 2", "body": "body 2", "postedBy": "denny" },
+  { "id": 3, "title": "title 3", "body": "body 3", "postedBy": "denny" },
+  { "id": 4, "title": "title 4", "body": "body 4", "postedBy": "denny" }
+]
