@@ -8,7 +8,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13"
+  },
   "devDependencies": {
     "@types/node": "^16.9.6",
     "concurrently": "^6.2.1",
