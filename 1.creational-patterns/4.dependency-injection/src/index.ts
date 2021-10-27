@@ -1,5 +1,5 @@
-import { IoCContainer } from "./IoCContainer";
-import "./test";
+import { IoCContainer, Injectable } from "./IoCContainer";
+// import "./test";
 
 interface IDepA {
   doA(): void;
@@ -13,18 +13,21 @@ interface IDepC {
   doC(): void;
 }
 
+@Injectable("IDepA")
 class ConcreteA implements IDepA {
   doA() {
     console.log("Doing A");
   }
 }
 
+@Injectable("IDepB")
 class ConcreteB implements IDepB {
   doB() {
     console.log("Doing B");
   }
 }
 
+@Injectable("IDepC", ["IDepA", "IDepB"])
 class ConcreteC implements IDepC {
   constructor(private _concreteA: IDepA, private _concreteB: IDepB) {}
   doC() {
@@ -34,9 +37,9 @@ class ConcreteC implements IDepC {
   }
 }
 
-IoCContainer.instance.register("IDepA", [], ConcreteA);
-IoCContainer.instance.register("IDepB", [], ConcreteB);
-IoCContainer.instance.register("IDepC", ["IDepA", "IDepB"], ConcreteC);
+// IoCContainer.instance.register("IDepA", [], ConcreteA);
+// IoCContainer.instance.register("IDepB", [], ConcreteB);
+// IoCContainer.instance.register("IDepC", ["IDepA", "IDepB"], ConcreteC);
 const a = IoCContainer.instance.resolve<IDepA>("IDepA");
 a.doA();
 const b = IoCContainer.instance.resolve<IDepB>("IDepB");

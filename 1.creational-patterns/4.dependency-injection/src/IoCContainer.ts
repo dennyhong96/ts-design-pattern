@@ -1,3 +1,11 @@
+// Injectable constructor decorator
+export function Injectable(name: string, dependencies: string[] = []) {
+  const container = IoCContainer.instance;
+  return function <T extends { new (...args: any[]): {} }>(constructor: T) {
+    container.register(name, dependencies, constructor);
+  };
+}
+
 // IoC Container or DI Container
 export class IoCContainer {
   private static _instance: IoCContainer = new IoCContainer();
