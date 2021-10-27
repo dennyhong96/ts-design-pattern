@@ -1,4 +1,5 @@
-import { IoCContainer } from "./IOCContainer";
+import { IoCContainer } from "./IoCContainer";
+import "./test";
 
 interface IDepA {
   doA(): void;
